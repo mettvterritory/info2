@@ -7,6 +7,14 @@ package uebung05;
  *
  * @author: Samuel Luft
  */
-public class Property {
+public abstract class Property {
+  private double price;
 
+  protected Property(String name, String type){
+
+  }
+
+  public double getPrice() {
+	return price;
+  }
 }
