@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Directory.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #53ebdc; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(216,130,244); }
+.s1 { color: rgb(107,112,122); }
+.s2 { color: rgb(243,246,238); }
+.s3 { color: rgb(95,105,133); }
+.s4 { color: rgb(208,155,235); }
+.s5 { color: rgb(186,209,235); }
+.s6 { color: rgb(146,240,139); }
+</style>
+</head>
+<BODY BGCOLOR="#252730">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Directory.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">uebung04</span><span class="s2">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">zip</span><span class="s2">.</span><span class="s1">DataFormatException</span><span class="s2">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">uebung04</span><span class="s2">.</span><span class="s1">File</span><span class="s2">;</span><span class="s1"> 
+</span><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayDeque</span><span class="s2">;</span><span class="s1"> 
+ 
+</span><span class="s3">/** 
+ * &lt;Aufgabe 16b&gt; 
+ * 
+ * Copyright (c) $today.year 
+ * 
+ * </span><span class="s4">@author: </span><span class="s3">Samuel Luft 
+ */</span><span class="s1"> 
+</span><span class="s0">public class </span><span class="s1">Directory { 
+  </span><span class="s0">private </span><span class="s1">ArrayList</span><span class="s5">&lt;</span><span class="s1">File</span><span class="s5">&gt; </span><span class="s1">filelelement</span><span class="s2">;</span><span class="s1"> 
+  </span><span class="s0">private </span><span class="s1">ArrayList</span><span class="s5">&lt;</span><span class="s1">Directory</span><span class="s5">&gt; </span><span class="s1">directoryelement</span><span class="s2">;</span><span class="s1"> 
+ 
+  </span><span class="s0">public </span><span class="s1">ArrayList</span><span class="s5">&lt;</span><span class="s1">File</span><span class="s5">&gt; </span><span class="s1">getlinkFileelement(){ 
+    </span><span class="s0">return this</span><span class="s2">.</span><span class="s1">filelelement</span><span class="s2">;</span><span class="s1"> 
+  } 
+  </span><span class="s0">public </span><span class="s1">ArrayList</span><span class="s5">&lt;</span><span class="s1">Directory</span><span class="s5">&gt; </span><span class="s1">getlinkDirectoryelement(){ 
+    </span><span class="s0">return this</span><span class="s2">.</span><span class="s1">directoryelement</span><span class="s2">;</span><span class="s1"> 
+  } 
+  </span><span class="s0">public void </span><span class="s1">linkFileelement(File file) </span><span class="s0">throws </span><span class="s1">DataFormatException{ 
+    </span><span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s2">.</span><span class="s1">filelelement</span><span class="s2">.</span><span class="s1">contains(file)){ 
+      </span><span class="s0">throw new </span><span class="s1">DataFormatException(</span><span class="s6">&quot;No duplicate files allowed&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+    }</span><span class="s0">else</span><span class="s1">{ 
+      </span><span class="s0">this</span><span class="s2">.</span><span class="s1">filelelement</span><span class="s2">.</span><span class="s1">add(file)</span><span class="s2">;</span><span class="s1"> 
+    } 
+  } 
+  </span><span class="s0">public void </span><span class="s1">linkDirectoryelement (Directory directory) </span><span class="s0">throws </span><span class="s1">DataFormatException { 
+    </span><span class="s0">if </span><span class="s1">(</span><span class="s0">this</span><span class="s2">.</span><span class="s1">directoryelement</span><span class="s2">.</span><span class="s1">contains(directory)) { 
+      </span><span class="s0">throw new </span><span class="s1">DataFormatException(</span><span class="s6">&quot;No duplicate directories allowed&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+    } </span><span class="s0">else</span><span class="s1">{ 
+      </span><span class="s0">this</span><span class="s2">.</span><span class="s1">directoryelement</span><span class="s2">.</span><span class="s1">add(directory)</span><span class="s2">;</span><span class="s1"> 
+    } 
+  } 
+  </span><span class="s0">public void </span><span class="s1">unlinkFileelement (File file){ 
+    </span><span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s2">.</span><span class="s1">filelelement</span><span class="s2">.</span><span class="s1">contains(file)){ 
+      </span><span class="s0">this</span><span class="s2">.</span><span class="s1">filelelement</span><span class="s2">.</span><span class="s1">remove(file)</span><span class="s2">;</span><span class="s1"> 
+    } 
+  } 
+  </span><span class="s0">public void </span><span class="s1">unlinkDirectoryelement (Directory directory){ 
+    </span><span class="s0">if</span><span class="s1">(</span><span class="s0">this</span><span class="s2">.</span><span class="s1">directoryelement</span><span class="s2">.</span><span class="s1">contains(directory)){ 
+      </span><span class="s0">this</span><span class="s2">.</span><span class="s1">directoryelement</span><span class="s2">.</span><span class="s1">remove(directory)</span><span class="s2">;</span><span class="s1"> 
+    } 
+  } 
+} 
+</span></pre>
+</body>
+</html>
