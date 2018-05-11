@@ -3,7 +3,7 @@ package uebung05;
 import uebung05.Property;
 
 /**
- * <Filename>
+ * <Flat - Uebung  05>
  *
  * Copyright (c) $today.year
  *
@@ -20,6 +20,10 @@ public class Flat extends Property {
 
   public int getArea() {
 	return area;
+  }
+
+  public String toString(){
+    return ("Preis: "+ this.getPrice()+ " Wohnflaeche: " + this.area);
   }
 
   @Override

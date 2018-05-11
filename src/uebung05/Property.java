@@ -1,7 +1,7 @@
 package uebung05;
 
 /**
- * <Filename>
+ * <Property - Uebung 05>
  *
  * Copyright (c) $today.year
  *

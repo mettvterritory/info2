@@ -1,7 +1,7 @@
 package uebung05;
 
 /**
- * <Filename>
+ * <Plot - Uebung 05>
  *
  * Copyright (c) $today.year
  *
