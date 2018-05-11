@@ -10,9 +10,7 @@ package uebung05;
 public abstract class Property {
   private double price;
 
-  protected Property(String name, String type){
-
-  }
+  protected Property(double price){}
 
   public double getPrice() {
 	return price;
