@@ -1,7 +1,7 @@
 package uebung05;
 
 /**
- * <Filename>
+ * <Sphere - Uebung 05>
  *
  * Copyright (c) $today.year
  *
