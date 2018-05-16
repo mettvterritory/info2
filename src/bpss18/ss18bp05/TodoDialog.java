@@ -50,7 +50,7 @@ public class TodoDialog extends Dialog {
 	super(owner);
 	this.setLocation(400, 300);
 	this.setSize(100, 50);
-	setTitle("Error");
+	setTitle("Exception");
 	textLabel = new Label(dfe.getMessage());
 	this.add(textLabel, BorderLayout.NORTH);
 	okButton = new Button("OK");
