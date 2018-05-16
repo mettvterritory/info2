@@ -20,52 +20,49 @@ public class task {
 
   /**
    * Erzegt neuen Task mit uebergebenem Namen und Standard-prioritaet
-   * @param name
-   * @throws DataFormatException
    */
-  public task (String name) throws DataFormatException {
-    setName(name);
-    this.priority = 1;
+  public task(String name) throws DataFormatException {
+	setName(name);
+	this.priority = 1;
   }
 
   /**
    * Erzeugt neuen Task mit uebergebenem namen und uebergebener Prioritaet
-   * @param name
-   * @param prio
-   * @throws DataFormatException
    */
-  public task (String name, int prio) throws DataFormatException {
-    setName(name);
-    setPriority(prio);
+  public task(String name, int prio) throws DataFormatException {
+	setName(name);
+	setPriority(prio);
   }
 
   /**
    * gibt Prioritaet zurueck
+   *
    * @return Prioritaet des Tasks
    */
   public int getPriority() {
-    return this.priority;
+	return this.priority;
   }
 
   /**
    * gibt Name zurueck
+   *
    * @return Name des Tasks
    */
   public String getName() {
-    return this.name;
+	return this.name;
   }
 
   /**
    * Setzt Prioritaet falls ein gueltiger Wert uebergebe wird. Gueltig sind Zahlen von 1 bis 5.
    *
-   * @param priority
-   *              Prioritaet
+   * @param priority Prioritaet
    * @throws DataFormatException falls ungueltige Daten uebergeben werden
    */
   public void setPriority(int priority) throws DataFormatException {
-    if (!checkPriority(priority))
-      throw new DataFormatException("Priority invalid");
-    this.priority = priority;
+	if (!checkPriority(priority)) {
+	  throw new DataFormatException("Priority invalid");
+	}
+	this.priority = priority;
   }
 
   /**
@@ -75,7 +72,7 @@ public class task {
    * @return gueltigkeit übergebener Daten
    */
   private static boolean checkPriority(int priority) {
-    return (priority > 0 && priority < 6);
+	return (priority > 0 && priority < 6);
   }
 
   /**
@@ -85,21 +82,24 @@ public class task {
    * @throws DataFormatException falls ungueltige Daten uebergeben werden
    */
   public void setName(String name) throws DataFormatException {
-    if (!checkName(name))
-      throw new DataFormatException("Name invalid");
-    this.name = name;
+	if (!checkName(name)) {
+	  throw new DataFormatException("Name invalid");
+	}
+	this.name = name;
   }
 
   /**
    * Prueft ob uebergebene Daten gueltig sind
+   *
    * @param name Name
    * @return gueltigkeit der uebergebenen Daten
    */
   private static boolean checkName(String name) {
-    if(name == null) return false;
-    return (name.length() > 0);
+	if (name == null) {
+	  return false;
+	}
+	return (name.length() > 0);
   }
-
 
 
 }

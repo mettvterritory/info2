@@ -43,7 +43,8 @@ public class Cuboid extends Body {
 	  return false;
 	}
 	Cuboid tmp = (Cuboid) input;
-	return (this.width == tmp.getWidth() && this.height == tmp.getHeight() && this.length == tmp.getLength());
+	return (this.width == tmp.getWidth() && this.height == tmp.getHeight() && this.length == tmp
+		.getLength());
   }
 }
 

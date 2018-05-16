@@ -8,5 +8,7 @@ package uebung04;
  * @author: Samuel Luft
  */
 public class File {
-  public File(){}
+
+  public File() {
+  }
 }

@@ -11,6 +11,7 @@ import java.util.Date;
  * @author: Samuel Luft
  */
 public class Studium {
+
   private Date immatrikulation;
   private Date exmatrikulation;
 }
