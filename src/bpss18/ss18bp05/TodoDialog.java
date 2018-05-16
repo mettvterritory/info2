@@ -31,6 +31,7 @@ public class TodoDialog extends Dialog {
 		case 1:	textLabel = new Label("Universität: "+ task.getDescription());
 		break;
 		case 2:	textLabel = new Label("Privat: "+ task.getDescription());
+		break;
 	  }
 	}
 	this.add(textLabel, BorderLayout.NORTH);
