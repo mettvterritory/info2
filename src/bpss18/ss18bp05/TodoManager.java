@@ -93,7 +93,7 @@ public class TodoManager extends Frame {
 		} catch (DataFormatException ex) {
 		  new TodoDialog(TodoManager.this, ex);
 		}
-		//descriptionBox.setText("");
+		descriptionBox.setText("");
 		priority = 1;
 		priorityLabel.setText("Priorität: " + priority);
 		prioritySlider.setValue(1);
