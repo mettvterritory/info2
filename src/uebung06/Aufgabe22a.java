@@ -4,6 +4,8 @@ import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.TextField;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * <Aufgabe 22a>
@@ -30,5 +32,12 @@ public class Aufgabe22a extends Frame {
 	pack();
 	this.setLocation(400, 400);
 	this.setVisible(true);
+
+	this.addWindowListener(new WindowAdapter() {
+	  @Override
+	  public void windowClosing(WindowEvent e) {
+		dispose();
+	  }
+	});
   }
 }

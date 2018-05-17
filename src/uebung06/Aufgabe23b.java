@@ -8,6 +8,8 @@ import java.awt.Panel;
 import java.awt.TextField;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * <Aufgabe 23b>
@@ -40,6 +42,12 @@ public class Aufgabe23b extends Frame implements ItemListener {
 	pack();
 	bottomHalf.setVisible(false);
 	this.setVisible(true);
+	this.addWindowListener(new WindowAdapter() {
+	  @Override
+	  public void windowClosing(WindowEvent e) {
+		dispose();
+	  }
+	});
   }
 
   @Override

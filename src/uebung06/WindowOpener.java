@@ -14,6 +14,8 @@ public class WindowOpener {
 	new Aufgabe22b();
 	new Aufgabe23a();
 	new Aufgabe23b();
+	new Aufgabe24a();
+	new Aufgabe24b();
 
   }
 
