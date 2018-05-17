@@ -22,8 +22,8 @@ public class Flat extends Property {
 	return area;
   }
 
-  public String toString(){
-    return ("Preis: "+ this.getPrice()+ " Wohnflaeche: " + this.area);
+  public String toString() {
+	return ("Preis: " + this.getPrice() + " Wohnflaeche: " + this.area);
   }
 
   @Override

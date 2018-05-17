@@ -8,11 +8,12 @@ package uebung02.Aufgabe5;
  * @author: Samuel Luft
  */
 public class a5b {
-	public static void main (String args[]){
-		StringBuilder s = new StringBuilder();
-		for(String t:args){
-			s.append(t);
-		}
-		System.out.println(s.length());
+
+  public static void main(String args[]) {
+	StringBuilder s = new StringBuilder();
+	for (String t : args) {
+	  s.append(t);
 	}
+	System.out.println(s.length());
+  }
 }

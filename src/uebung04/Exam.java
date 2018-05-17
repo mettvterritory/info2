@@ -1,4 +1,5 @@
 package uebung04;
+
 import java.util.ArrayList;
 import uebung04.Evaluation;
 
@@ -10,6 +11,7 @@ import uebung04.Evaluation;
  * @author: Samuel Luft
  */
 public class Exam {
-  private ArrayList <Evaluation> examinees;
+
+  private ArrayList<Evaluation> examinees;
 
 }

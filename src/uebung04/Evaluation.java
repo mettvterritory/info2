@@ -1,4 +1,5 @@
 package uebung04;
+
 import uebung04.Student;
 import java.util.Date;
 
@@ -10,6 +11,7 @@ import java.util.Date;
  * @author: Samuel Luft
  */
 public class Evaluation {
+
   private Student student;
   private Double grade;
   private String remark;
