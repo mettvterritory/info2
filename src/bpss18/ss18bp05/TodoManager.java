@@ -113,6 +113,4 @@ public class TodoManager extends Frame {
 	this.setVisible(true);
 
   }
-
-
 }

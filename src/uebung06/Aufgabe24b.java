@@ -30,9 +30,7 @@ public class Aufgabe24b extends Frame implements ActionListener {
 	placeholder.setSize(1, this.getHeight() / 3);
 	buttonPanel.add(decrement = new Button("-"), BorderLayout.WEST);
 	buttonPanel.add(increment = new Button("+"), BorderLayout.EAST);
-	this.add(buttonPanel, BorderLayout.CENTER);
-	increment.setSize(40, 40);
-	decrement.setSize(40, 40);
+	this.add(buttonPanel, BorderLayout.CENTER);decrement.setSize(100, 100);
 	increment.addActionListener(this);
 	decrement.addActionListener(this);
 	this.setVisible(true);
