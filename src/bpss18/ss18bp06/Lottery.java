@@ -99,7 +99,8 @@ public class Lottery extends Frame implements ActionListener {
 			j++;
 		  }
 		}
-		message.setText("Gratuliere. Es wurden " + playLottery(lotteryParams) + " aus 49 getroffen");
+		message
+			.setText("Gratuliere. Es wurden " + playLottery(lotteryParams) + " aus 49 getroffen");
 	  }
 	}
 
@@ -111,7 +112,7 @@ public class Lottery extends Frame implements ActionListener {
 
 	//generating unique random ints
 	for (int i = 0; i < 6; ) {
-	  int tmp = (int) ((java.lang.Math.random()) * 6 + 1);
+	  int tmp = (int) ((java.lang.Math.random()) * 49 + 1);
 	  for (int k : rands) {
 		if ((k == 0)) {
 		  rands[i] = tmp;
@@ -124,7 +125,7 @@ public class Lottery extends Frame implements ActionListener {
 
 	}
 	for (int i = 0; i < 6; i++) {
-	    System.out.println("Random number at index: "+ i + " "+ rands[i]);
+	  System.out.println("Random number at index: " + i + " " + rands[i]);
 	}
 	for (int checkFor : lotteryParams) {
 //	  System.out.println("Layer 1: CheckFor: "+ checkFor);
