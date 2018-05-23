@@ -6,8 +6,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.GridLayout;
-import java.awt.Label;
 import java.awt.Panel;
+import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -24,7 +24,7 @@ public class Lottery extends Frame implements ActionListener {
 
   private LotteryButton fields[];
   private int counter;
-  private Label message;
+  private TextField message;
 
   public Lottery() {
 	super("Lottery");
@@ -48,7 +48,8 @@ public class Lottery extends Frame implements ActionListener {
 	this.add(buttonPanel, BorderLayout.CENTER);
 
 	//output message label
-	message = new Label();
+	message = new TextField();
+	message.setEditable(false);
 	this.add(message, BorderLayout.SOUTH);
 
 	this.addWindowListener(new WindowHandler());
@@ -98,8 +99,7 @@ public class Lottery extends Frame implements ActionListener {
 			j++;
 		  }
 		}
-		message
-			.setText("Gratuliere. Es wurden " + playLottery(lotteryParams) + " aus 49 getroffen");
+		message.setText("Gratuliere. Es wurden " + playLottery(lotteryParams) + " aus 49 getroffen");
 	  }
 	}
 
@@ -111,7 +111,7 @@ public class Lottery extends Frame implements ActionListener {
 
 	//generating unique random ints
 	for (int i = 0; i < 6; ) {
-	  int tmp = (int) ((java.lang.Math.random()) * 49 + 1);
+	  int tmp = (int) ((java.lang.Math.random()) * 6 + 1);
 	  for (int k : rands) {
 		if ((k == 0)) {
 		  rands[i] = tmp;
@@ -124,7 +124,7 @@ public class Lottery extends Frame implements ActionListener {
 
 	}
 	for (int i = 0; i < 6; i++) {
-	  //  System.out.println("Random number at index: "+ i + " "+ rands[i]);
+	    System.out.println("Random number at index: "+ i + " "+ rands[i]);
 	}
 	for (int checkFor : lotteryParams) {
 //	  System.out.println("Layer 1: CheckFor: "+ checkFor);
