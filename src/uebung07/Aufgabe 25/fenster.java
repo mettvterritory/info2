@@ -5,13 +5,14 @@ import java.awt.event.*;
 import java.util.*;
 
 public class fenster extends Frame implements ActionListener {
-
-	ArrayList<Double> liste = new ArrayList<>();
-	Button random = new Button("random");
-	Button history = new Button("history");
-	TextField feld = new TextField();
 	
 	public fenster () {
+			
+			ArrayList<Double> liste = new ArrayList<>();
+			Button random = new Button("random");
+			Button history = new Button("history");
+			TextField feld = new TextField();
+			
 			this.setLayout(new FlowLayout());
 			
 			random.addActionListener(this);
