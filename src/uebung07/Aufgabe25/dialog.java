@@ -1,4 +1,4 @@
-package Aufgabe25;
+package uebung07.Aufgabe25;
 
 import java.awt.*;
 import java.awt.event.*;
