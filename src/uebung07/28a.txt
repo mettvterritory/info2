@@ -1,0 +1,5 @@
+insert into Point values
+(5,0,0);
+update Circle
+set position = 5
+where ID = 7;

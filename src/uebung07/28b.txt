@@ -1,0 +1,5 @@
+delete from Kunde
+where ID = 123;
+
+select distinct kundeID
+where beginn is 2017-12-20;
