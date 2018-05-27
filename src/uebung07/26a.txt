@@ -1,0 +1,9 @@
+
+create table Behandlung
+(
+		ID			integer			not null,
+		diagnose	varchar(199)	not null,
+		primary key(ID),
+		foreign key(Patient) references Patient(ID),
+		foreign key(Arzt) references Arzt(ID),
+);

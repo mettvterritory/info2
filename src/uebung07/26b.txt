@@ -1,0 +1,14 @@
+26b
+
+create Table Buch
+(
+	ISBN varChar(10) not null,
+	Jahr integer ,
+	Autor varChar(20) not null,
+	
+	check(|ISBN| == 10),
+	
+	primary key(ISBN),
+	
+)
+	

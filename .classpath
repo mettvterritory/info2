@@ -3,4 +3,4 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="output" path="out/production/IT2"/>
-</classpath>
+</classpath><classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
