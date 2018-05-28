@@ -1,0 +1,24 @@
+create table Circle
+(
+	ID	integer		not null,
+	radius	float,		not null,
+	primary key(ID),
+	foreign key(positionID) references Point(ID),
+);
+
+create table Rectangle
+(
+	ID	integer		not null,
+	length	float,		not null,
+	width	float,		not null,
+	primary key(ID),
+	foreign key(positionID) references Point(ID),
+);
+
+create table Point
+(
+	ID	integer		not null,
+	x	float		not null,
+	y	float		not null,
+	primary key(ID),
+);
