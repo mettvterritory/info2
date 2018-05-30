@@ -27,7 +27,7 @@ public class CreateEmployee extends Frame {
 
   private TextField number, name, begin, status;
   private Button insertButton;
-  Connection c;
+  private Connection c;
   private final static String connector = "jdbc:mysql://educos-srv01.informatik.uni-augsburg.de:3306/theDatabase?useSSL=false&serverTimezone=Europe/Berlin";
   private final static String user = "student";
   private final static String key = "inFormatik2";
@@ -60,12 +60,12 @@ public class CreateEmployee extends Frame {
 	this.addWindowListener(new WindowAdapter() {
 	  @Override
 	  public void windowClosing(WindowEvent e) {
-		try {
-		  if (!(c.isClosed())) {
+		if (c == null) {
+		  try {
 			c.close();
+		  } catch (SQLException ex) {
+			System.err.println(ex.getMessage());
 		  }
-		} catch (SQLException ex) {
-		  status.setText("Verbindungsfehler: " + ex.getMessage());
 		}
 		dispose();
 	  }
@@ -83,7 +83,7 @@ public class CreateEmployee extends Frame {
 	  Statement save = c.createStatement();
 	  save.executeUpdate(
 		  "INSERT INTO Angestellter VALUES (" + number.getText() + ",'" + name.getText() + "','"
-			  + begin.getText() + "',null, false,null)");
+			  + begin.getText() + "',null, false, null)");
 	  name.setText("");
 	  number.setText("");
 	  begin.setText("");
