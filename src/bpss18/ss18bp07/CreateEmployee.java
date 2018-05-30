@@ -60,12 +60,14 @@ public class CreateEmployee extends Frame {
 	this.addWindowListener(new WindowAdapter() {
 	  @Override
 	  public void windowClosing(WindowEvent e) {
-	    try {
-		  c.close();
-		  dispose();
-		}catch (SQLException ex){
-	      status.setText("Verbindungsfehler: "+ ex.getMessage());
+		try {
+		  if (!(c.isClosed())) {
+			c.close();
+		  }
+		} catch (SQLException ex) {
+		  status.setText("Verbindungsfehler: " + ex.getMessage());
 		}
+		dispose();
 	  }
 	});
 
