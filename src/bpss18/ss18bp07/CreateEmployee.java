@@ -60,7 +60,7 @@ public class CreateEmployee extends Frame {
 	this.addWindowListener(new WindowAdapter() {
 	  @Override
 	  public void windowClosing(WindowEvent e) {
-		if (c == null) {
+		if (c!= null) {
 		  try {
 			c.close();
 		  } catch (SQLException ex) {
