@@ -94,7 +94,7 @@ public class TheFiller extends Frame {
 		save.executeUpdate(
 			"INSERT INTO Angestellter VALUES (" + counter
 				+ ",'John Cena','30.05.2018',null, false,null)");
-		status.setText("Erfolg "+ counter);
+		status.setText("Erfolg " + counter);
 		counter++;
 	  } catch (SQLException ex) {
 		status.setText("Fehlermeldung: " + ex.getMessage());
