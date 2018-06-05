@@ -109,7 +109,7 @@ public class Aufgabe2930 extends Frame {
 	Button connectDButton;
 
 	public PopupDialog(Aufgabe2930 owner) {
-	  super(owner);
+	  super(owner, "Database Login", true);
 	  this.setLocation(owner.getLocationOnScreen());
 	  Panel userInputPanel = new Panel();
 	  userInputPanel.setLayout(new GridLayout(2, 2));
@@ -131,7 +131,7 @@ public class Aufgabe2930 extends Frame {
 	}
 
 	public PopupDialog(Aufgabe2930 owner, ResultSet data) {
-	  super(owner);
+	  super(owner, "Database Output", true);
 	  this.setLocation(owner.getLocationOnScreen());
 	  TextArea largeText = new TextArea();
 	  largeText.setEditable(false);
