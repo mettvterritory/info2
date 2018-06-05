@@ -2,13 +2,15 @@
 
 create Table Buch
 (
-	ISBN varChar(10) not null,
+	ISBN char(10) not null,
 	Jahr integer ,
-	Autor varChar(20) not null,
-	
-	check(|ISBN| == 10),
-	
-	primary key(ISBN),
-	
+	primary key(ISBN)
 )
 	
+create Table BuchAutor
+(
+	autor varchar(20) not null,
+	isbn char(10) not null,
+	foreign key (isbn) references Buch(isbn),
+	primary key (autor, isbn)
+)
