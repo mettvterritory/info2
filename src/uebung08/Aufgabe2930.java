@@ -79,7 +79,7 @@ public class Aufgabe2930 extends Frame {
 	this.setVisible(true);
   }
 
-  private void /*falsch*/ load() {
+  private void load() {
 	try {
 	  Statement load = c.createStatement();
 	  ResultSet bigData = load.executeQuery("SELECT * FROM Angestellter");
