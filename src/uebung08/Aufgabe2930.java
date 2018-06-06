@@ -158,10 +158,7 @@ public class Aufgabe2930 extends Frame {
 
 	}
   }
-
   public static void main(String[] args) {
 	new Aufgabe2930();
   }
-
-
 }
