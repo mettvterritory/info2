@@ -5,7 +5,6 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dialog;
 import java.awt.Frame;
-import java.awt.Label;
 import java.awt.Panel;
 import java.util.Observable;
 import java.util.Observer;
@@ -18,10 +17,12 @@ import java.util.Observer;
  * @author: Samuel Luft
  */
 public class ColourDialog extends Dialog implements Observer {
+
   Panel ColorPanel;
-  public ColourDialog(Frame owner){
-    super(owner);
-	setSize(200,100);
+
+  public ColourDialog(Frame owner) {
+	super(owner);
+	setSize(200, 100);
 	add(ColorPanel = new Panel(), BorderLayout.CENTER);
 
 	setUndecorated(true);

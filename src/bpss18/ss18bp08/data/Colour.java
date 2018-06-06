@@ -11,12 +11,14 @@ import java.util.Observable;
  * @author: Samuel Luft
  */
 public class Colour extends Observable {
+
   private int red = 0;
   private int green = 0;
   private int blue = 0;
   private static Colour unique = null;
 
-  private Colour(){}
+  private Colour() {
+  }
 
   public void setGreen(int green) {
 	this.green = green;
@@ -37,13 +39,13 @@ public class Colour extends Observable {
 	notifyObservers();
   }
 
-  public Color getColour(){
-    return new Color(red,green,blue);
+  public Color getColour() {
+	return new Color(red, green, blue);
   }
 
-  public static Colour instance(){
-    if(unique == null){
-      unique = new Colour();
+  public static Colour instance() {
+	if (unique == null) {
+	  unique = new Colour();
 	}
 	return unique;
 
