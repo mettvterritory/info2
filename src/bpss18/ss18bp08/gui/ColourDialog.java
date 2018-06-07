@@ -18,7 +18,7 @@ import java.util.Observer;
  */
 public class ColourDialog extends Dialog implements Observer {
 
-  Panel ColorPanel;
+  private Panel ColorPanel;
 
   public ColourDialog(Frame owner) {
 	super(owner);
@@ -26,7 +26,6 @@ public class ColourDialog extends Dialog implements Observer {
 	add(ColorPanel = new Panel(), BorderLayout.CENTER);
 
 	setUndecorated(true);
-	setColor();
 
 	Colour colour = Colour.instance();
 	colour.addObserver(this);

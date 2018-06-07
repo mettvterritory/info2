@@ -119,6 +119,12 @@ public class Aufgabe2930 extends Frame {
 	  userInputPanel.add(keyField = new TextField(20));
 	  this.add(userInputPanel, BorderLayout.CENTER);
 	  this.add(connectDButton = new Button("connect"), BorderLayout.SOUTH);
+	  this.addWindowListener(new WindowAdapter() {
+		@Override
+		public void windowClosing(WindowEvent e) {
+		  dispose();
+		}
+	  });
 	  connectDButton.addActionListener(new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -133,6 +139,12 @@ public class Aufgabe2930 extends Frame {
 	public PopupDialog(Aufgabe2930 owner, ResultSet data) {
 	  super(owner, "Database Output", true);
 	  this.setLocation(owner.getLocationOnScreen());
+	  this.addWindowListener(new WindowAdapter() {
+		@Override
+		public void windowClosing(WindowEvent e) {
+		  dispose();
+		}
+	  });
 	  TextArea largeText = new TextArea();
 	  largeText.setEditable(false);
 	  try {
@@ -148,16 +160,11 @@ public class Aufgabe2930 extends Frame {
 	  this.add(largeText);
 	  pack();
 	  this.setVisible(true);
-	  this.addWindowListener(new WindowAdapter() {
-		@Override
-		public void windowClosing(WindowEvent e) {
-		  dispose();
-		}
-	  });
 
 
 	}
   }
+
   public static void main(String[] args) {
 	new Aufgabe2930();
   }

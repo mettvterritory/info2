@@ -24,12 +24,11 @@ public class ControllerFrame extends Frame implements AdjustmentListener {
   private Scrollbar blueBar;
 
   public ControllerFrame() {
-	super();
+	super("ColourObserverGame");
 	//setUndecorated(true);
-	this.setLocation(280, 160);
-	this.setSize(300, 100);
 
 	this.setLayout(new GridLayout(3, 1, 5, 5));
+
 	this.add(redBar = new Scrollbar(Scrollbar.HORIZONTAL, 0, 25, 0, 280));
 	redBar.addAdjustmentListener(this);
 	this.add(greenBar = new Scrollbar(Scrollbar.HORIZONTAL, 0, 25, 0, 280));
@@ -37,11 +36,20 @@ public class ControllerFrame extends Frame implements AdjustmentListener {
 	this.add(blueBar = new Scrollbar(Scrollbar.HORIZONTAL, 0, 25, 0, 280));
 	blueBar.addAdjustmentListener(this);
 
+	WindowAdapter windowHandler = new WindowAdapter() {
+	  @Override
+	  public void windowClosing(WindowEvent e) {
+		dispose();
+	  }
+	};
+	this.addWindowListener(windowHandler);
+
 	StringDialog sd = new StringDialog(this);
-	sd.setLocation(60, 160);
+	sd.setLocation(600, 160);
 	ColourDialog cd = new ColourDialog(this);
-	cd.setLocation(600, 160);
-	this.addWindowListener(new WindowHandler());
+	cd.setLocation(60, 160);
+	this.setLocation(280, 160);
+	this.setSize(300, 100);
 
 	this.setVisible(true);
 
@@ -65,14 +73,12 @@ public class ControllerFrame extends Frame implements AdjustmentListener {
 	}
 
   }
-
-
+/*
   private class WindowHandler extends WindowAdapter {
-
 	@Override
 	public void windowClosing(WindowEvent e) {
 	  dispose();
 	}
   }
-
+*/
 }
