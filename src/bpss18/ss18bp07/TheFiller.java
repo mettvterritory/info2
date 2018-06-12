@@ -93,7 +93,7 @@ public class TheFiller extends Frame {
 		Statement save = c.createStatement();
 		save.executeUpdate(
 			"INSERT INTO Angestellter VALUES (" + counter
-				+ ",'John Cena','30.05.2018',null, false,null)");
+				+ ",'Hallo Marco <3','30.05.2018',null, false,null)");
 		status.setText("Erfolg " + counter);
 		counter++;
 	  } catch (SQLException ex) {
