@@ -164,14 +164,14 @@ iterator()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>820</x>
+      <x>840</x>
       <y>400</y>
-      <w>480</w>
+      <w>460</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;.
 it</panel_attributes>
-    <additional_attributes>10.0;30.0;220.0;30.0</additional_attributes>
+    <additional_attributes>10.0;30.0;210.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
