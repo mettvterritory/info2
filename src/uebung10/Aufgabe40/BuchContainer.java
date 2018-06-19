@@ -4,6 +4,6 @@ import java.util.List;
 
 public class BuchContainer {
   private List<Buch> alleBuecher;
-  private Datenbank store;
+  private DatenhaltungsDB store;
 
 }
