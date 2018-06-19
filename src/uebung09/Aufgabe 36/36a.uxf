@@ -152,14 +152,14 @@ iterator()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>860</x>
+      <x>840</x>
       <y>360</y>
-      <w>440</w>
+      <w>460</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 iterator()</panel_attributes>
-    <additional_attributes>200.0;30.0;10.0;30.0</additional_attributes>
+    <additional_attributes>210.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -194,7 +194,7 @@ it</panel_attributes>
       <h>440</h>
     </coordinates>
     <panel_attributes>loop
-it.hasNext()</panel_attributes>
+[it.hasNext()]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -264,7 +264,7 @@ object</panel_attributes>
       <h>160</h>
     </coordinates>
     <panel_attributes>opt
-s == Artikel</panel_attributes>
+[s == Artikel]</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

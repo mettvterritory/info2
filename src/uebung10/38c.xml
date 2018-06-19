@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Buch_Kunde">
+    <xs:sequence>
+      <xs:complexType name="Buch">
+        <xs:element name="buecher" type="xs:ID" minOccurs="1"/>
+        <xs:attribute name="isbn" type="xs:string"/>
+      </xs:complexType>
+
+      <xs:complexType name="Kunde">
+        <xs:element name="kunde" type="xs:ID" maxOccurs="1" minOccurs="0"/>
+        <xs:attribute name="nummer" type="xs:integer"/>
+      </xs:complexType>
+    </xs:sequence>
+
+
+  </xs:complexType>
+</xs:schema>

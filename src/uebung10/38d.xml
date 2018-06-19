@@ -1,0 +1,37 @@
+<Datensatz>
+  <Employee>
+    <language>Walisisch</language>
+  </Employee>
+  <Employee>
+    <language>Deutsch</language>
+    <language>Franzoesisch</language>
+    <language>Englisch</language>
+    <language>Spanisch</language>
+  </Employee>
+  <Buch>
+    <isbn>978-0132350884</isbn>
+    <jahr>2008</jahr>
+    <autor>Robert Martin</autor>
+  </Buch>
+  <Buch>
+    <isbn>978-0099555353</isbn>
+    <jahr>2011</jahr>
+    <autor>Henning Mankell</autor>
+  </Buch>
+  <Buch_Kunde>
+    <Buch>
+      <isbn>978-1784700843</isbn>
+      <isbn>978-0099570554</isbn>
+    </Buch>
+    <Kunde>
+      <nummer>012345678</nummer>
+    </Kunde>
+  </Buch_Kunde>
+  <Buch_Kunde>
+    <Buch>
+      <isbn>978-0099571797</isbn>
+      <isbn>978-0099571827</isbn>
+    </Buch>
+    <Kunde>8924758629845</Kunde>
+  </Buch_Kunde>
+</Datensatz>
