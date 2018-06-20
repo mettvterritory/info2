@@ -105,12 +105,9 @@ public class ParcelStore {
 		writer.println(iterate.getStatus());
 	  }
 	  writer.println("end");
-	}catch (IOException ex){
-	  System.out.println("Writing to file failed: "+ ex.getMessage());
+	} catch (IOException ex) {
+	  System.out.println("Writing to file failed: " + ex.getMessage());
 	}
 
   }
 }
-
-
-

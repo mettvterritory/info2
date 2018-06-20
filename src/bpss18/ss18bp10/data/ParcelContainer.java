@@ -8,7 +8,8 @@ import bpss18.ss18bp10.store.StoreException;
 import bpss18.ss18bp10.store.ParcelStore;
 
 public class ParcelContainer implements Iterable<Parcel> {
-    private static ParcelContainer unique = null;
+  private static final long serialVersionUID = 1L;
+  private static ParcelContainer unique = null;
     private List<Parcel> parcels;
     private ParcelStore store = null;
 
