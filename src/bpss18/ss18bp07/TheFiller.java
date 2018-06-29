@@ -48,7 +48,7 @@ public class TheFiller extends Frame {
 	inputPanel.add(new Label("Endindex: ", Label.RIGHT));
 	inputPanel.add(end);
 	Panel buttonPanel = new Panel();
-	fillButton = new Button("Datenbank füllen? ");
+	fillButton = new Button("DatenhaltungsDB füllen? ");
 	buttonPanel.setLayout(new GridLayout(2, 1));
 	Label warning = new Label("Warnung: hohe Füllmargen führen zu langen Bearbeitungszeiten",
 		Label.CENTER);
@@ -101,7 +101,7 @@ public class TheFiller extends Frame {
 		counter++;
 	  }
 	}
-	status.setText("es wurden " + (endIndex - startIndex) + " plätze in der Datenbank gefüllt");
+	status.setText("es wurden " + (endIndex - startIndex) + " plätze in der DatenhaltungsDB gefüllt");
   }
 
   private void connect() {
